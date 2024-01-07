@@ -103,6 +103,10 @@ msgstr "Tous les liens utilisent un format valide"
 msgid "Alt text for all images"
 msgstr "Texte alternatif pour toutes les images"
 
+#: core/Requirement/Featured_image_alt.php:36 core/Requirement/Featured_image_alt.php:37
+msgid "Alt text for featured images"
+msgstr "Texte alternatif pour les images sélectionnées"
+
 #: core/Requirement/Approved_by.php:41
 #, php-format
 msgid "Approved by %s"
