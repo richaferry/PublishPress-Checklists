@@ -57,6 +57,18 @@ if (class_exists('PublishPressInstanceProtection\\Config')) {
     $pluginChecker = new PublishPressInstanceProtection\InstanceChecker($pluginCheckerConfig);
 }
 
+if(!function_exists('write_log')){
+    function write_log( $data ) {
+        if ( true === WP_DEBUG ) {
+            if ( is_array( $data ) || is_object( $data ) ) {
+                error_log( print_r( $data, true ) );
+            } else {
+                error_log( $data );
+            }
+        }
+    }    
+}
+
 if (!defined('PPCH_LOADED')) {
     if (! defined('PPCH_LIB_VENDOR_PATH')) {
         define('PPCH_LIB_VENDOR_PATH', __DIR__ . '/lib/vendor');
