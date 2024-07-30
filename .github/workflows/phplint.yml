@@ -1,6 +1,6 @@
 name: PHPLint
 
-on: [push]
+on: [push, workflow_dispatch]
 
 jobs:
   phplint:
